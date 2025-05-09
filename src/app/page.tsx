@@ -98,14 +98,14 @@ export default function MultiStepForm() {
             {vehicles.map((vehicle, index) => (
               <div
                 key={index}
-                className="border border-gray-300 p-4 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out"
+                className="border border-gray-300 p-8 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out "
                 onClick={() => handleVehicleSelect(vehicle.name)}
               >
                 <Image 
                     src={vehicle.image} 
                     alt={vehicle.name} 
-                    width={300}
-                    height={300}
+                    width={200}
+                    height={200}
                     className="rounded-md mb-4 mx-auto" 
                 />
                 <h2 className="text-xl font-semibold text-center">{vehicle.name}</h2>
