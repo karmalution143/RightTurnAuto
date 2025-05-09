@@ -261,12 +261,12 @@ export default function MultiStepForm() {
     </div>
 
     {/* Steps */}
-<div className="mt-24 text-center flex flex-col lg:flex-row justify-center items-center gap-8">
+<div className="mt-24 text-center flex flex-col md:flex-col lg:flex-row justify-center items-center lg:gap-8 gap-8">
   {["Apply Online", "Get Pre-Approved", "Drive Away Today"].map((step, index) => (
     <div key={index} className="flex items-center flex-shrink-0">
       <div 
         className={`flex flex-col items-center p-4 rounded-md w-full max-w-xs 
-          ${colors[index].bg} ${colors[index].border} 
+          ${colors[index].bg} ${colors[index].border} flex-shrink-0
           border-t-4 border-b-4`}
         style={{ minWidth: '350px', height: '300px' }}
       >
@@ -322,8 +322,8 @@ export default function MultiStepForm() {
             <Image 
               src={vehicle.image} 
               alt={vehicle.name} 
-              width={150} 
-              height={150} 
+              width={250} 
+              height={250} 
               className="object-contain rounded-md mb-0" 
             />
           </div>
