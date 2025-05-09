@@ -318,7 +318,7 @@ export default function MultiStepForm() {
       <p className="text-lg text-center mb-4 px-8 sm:px-8 md:px-12 lg:px-36">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, We not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
       <div className="flex flex-wrap justify-center gap-2 p-4">
         {vehicles.map((vehicle, index) => (
-          <div key={index} className="flex-shrink-0">
+          <div key={index} className="grid-cols-4">
             <Image 
               src={vehicle.image} 
               alt={vehicle.name} 
