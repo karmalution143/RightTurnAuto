@@ -93,14 +93,14 @@ export default function MultiStepForm() {
         
       {step === 1 && (
         <div>
-          <h1 className="text-center text-5xl font-bold mt-16">Pick Your Vehicle</h1>
+          <h1 className="text-center text-5xl mt-16">Pick Your Vehicle</h1>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 px-4 mt-16 lg:ml-96 lg:mr-96">
             {vehicles.map((vehicle, index) => (
               <div
                 key={index}
-                className="border border-gray-300 p-8 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out "
+                className="border border-gray-300 pt-4 pl-4 pr-4 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out "
                 onClick={() => handleVehicleSelect(vehicle.name)}
-              >
+              ><h2 className="text-xl font-semibold text-center">{vehicle.name}</h2>
                 <Image 
                     src={vehicle.image} 
                     alt={vehicle.name} 
@@ -108,7 +108,7 @@ export default function MultiStepForm() {
                     height={250}
                     className="rounded-md mb-4 mx-auto" 
                 />
-                <h2 className="text-xl font-semibold text-center">{vehicle.name}</h2>
+
               </div>
             ))}
           </div>
