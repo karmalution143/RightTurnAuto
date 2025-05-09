@@ -259,7 +259,7 @@ export default function MultiStepForm() {
               <div className="w-16 border-t-4 border-green-500 mx-auto mb-6"></div>
               <p className="text-lg">
                 Common wisdom says that you need credit in order to build credit. But how do you take the first step if your credit score is standing in your way?
-                A lot of people are scared off by this 'credit paradox,' but there are ways around this vicious cycle. One of the best ways to develop a better credit score?
+                A lot of people are scared off by this &apos;credit paradox,&apos; but there are ways around this vicious cycle. One of the best ways to develop a better credit score?
                 Through regular credit payments, such as on a car loan.
               </p>
             </div>
@@ -270,7 +270,7 @@ export default function MultiStepForm() {
         <div className="text-black mt-8">
           <h2 className="text-4xl font-bold text-center mb-4">MORE VEHICLE <span className="text-green-500">OPTIONS</span></h2>
           <div className="w-16 border-t-4 border-green-500 mx-auto mb-6"></div>
-          <p className="text-lg text-center max-w-2xl mx-auto mb-4">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, I not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
+          <p className="text-lg text-center max-w-2xl mx-auto mb-4">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, We not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
           <div className="flex flex-wrap justify-center">
             {vehicles.map((vehicle, index) => (
               <Image key={index} src={vehicle.image} alt={vehicle.name} className="h-40 w-auto max-w-xs" />
