@@ -104,8 +104,8 @@ export default function MultiStepForm() {
                 <Image 
                     src={vehicle.image} 
                     alt={vehicle.name} 
-                    width={200}
-                    height={200}
+                    width={250}
+                    height={250}
                     className="rounded-md mb-4 mx-auto" 
                 />
                 <h2 className="text-xl font-semibold text-center">{vehicle.name}</h2>
