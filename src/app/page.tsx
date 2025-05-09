@@ -93,7 +93,7 @@ export default function MultiStepForm() {
         
       {step === 1 && (
         <div>
-          <h1 className="text-center text-4xl font-bold mt-16">Pick Your Vehicle</h1>
+          <h1 className="text-center text-5xl font-bold mt-16">Pick Your Vehicle</h1>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 px-4 mt-16 lg:ml-96 lg:mr-96">
             {vehicles.map((vehicle, index) => (
               <div
