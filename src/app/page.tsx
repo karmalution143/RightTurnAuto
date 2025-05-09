@@ -316,7 +316,7 @@ export default function MultiStepForm() {
       <h2 className="text-5xl font-bold text-center mb-4">MORE VEHICLE <span className="text-green-500">OPTIONS</span></h2>
       <div className="w-64 border-t-8 border-green-500 mx-auto mb-16"></div>
       <p className="text-lg text-center mb-4 px-8 sm:px-8 md:px-12 lg:px-96">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, We not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
-      <div className="flex flex-wrap justify-center gap-2 p-4">
+      <div className="flex flex-wrap justify-center">
         {vehicles.map((vehicle, index) => (
           <div key={index} className="flex-shrink-0 w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52">
             <Image 
