@@ -259,7 +259,7 @@ export default function MultiStepForm() {
               <div className="w-16 border-t-4 border-green-500 mx-auto mb-6"></div>
               <p className="text-lg">
               Common wisdom says that you need credit in order to build credit. But how do you take the first step if your credit score is standing in your way?
-              A lot of people are scared off by this {'credit paradox'}, but there are ways around this vicious cycle. One of the best ways to develop a better credit score?
+              A lot of people are scared off by this credit paradox, but there are ways around this vicious cycle. One of the best ways to develop a better credit score?
               Through regular credit payments, such as on a car loan.
               </p>
             </div>
