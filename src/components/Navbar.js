@@ -4,6 +4,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import styles from './Navbar.module.css';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +17,8 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
-  const [showNavbar, setShowNavbar] = useState(true);
-  const lastScrollY = useRef(0);
+  // const [showNavbar, setShowNavbar] = useState(true);
+  // const lastScrollY = useRef(0);
 
     useEffect(() => {
       const handleScroll = () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
   return (
     <header className={`${styles.navbar} ${!showNavbar ? styles.hidden : ''}`}>
       <div className={styles.logo}>
-        <img src="/logo.png" alt="Right Turn Auto Credit" className={styles.logoImg} />
+        <Image src="/logo.png" alt="Right Turn Auto Credit" className={styles.logoImg} />
       </div>
 
       <button

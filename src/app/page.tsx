@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import NavigationButtons from '../components/NavigationButtons';
+import Image from 'next/image';
 
 
 const vehicles = [
@@ -25,7 +26,7 @@ export default function MultiStepForm() {
   const [step, setStep] = useState<number>(1);
   const [selectedVehicle, setSelectedVehicle] = useState('');
   const [employment, setEmployment] = useState('');
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '' });
+  const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', phone: '' });
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -78,7 +79,7 @@ export default function MultiStepForm() {
                 className="border border-gray-300 p-6 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out"
                 onClick={() => handleVehicleSelect(vehicle.name)}
               >
-                <img src={vehicle.image} alt={vehicle.name} className="w-full h-30 object-cover rounded-md mb-4" />
+                <Image src={vehicle.Image} alt={vehicle.name} className="w-full h-30 object-cover rounded-md mb-4" />
                 <h2 className="text-xl font-semibold text-center">{vehicle.name}</h2>
               </div>
             ))}
@@ -117,6 +118,7 @@ export default function MultiStepForm() {
     <NavigationButtons
       onPrevious={handlePrevious}
       onNext={handleNext}
+      onSubmit={handleSubmit}
       isLastStep={false}
     />
   </div>
@@ -212,6 +214,7 @@ export default function MultiStepForm() {
     <NavigationButtons
       onPrevious={handlePrevious}
       onNext={handleNext}
+      onSubmit={handleSubmit}
       isLastStep={true}
     />
   </form>
@@ -274,7 +277,7 @@ export default function MultiStepForm() {
           <p className="text-lg text-center max-w-2xl mx-auto mb-4">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, I not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
           <div className="flex flex-wrap justify-center">
             {vehicles.map((vehicle, index) => (
-              <img key={index} src={vehicle.image} alt={vehicle.name} className="h-40 w-auto max-w-xs" />
+              <Image key={index} src={vehicle.Image} alt={vehicle.name} className="h-40 w-auto max-w-xs" />
             ))}
           </div>
         </div>
