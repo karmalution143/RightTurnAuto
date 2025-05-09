@@ -1,16 +1,9 @@
 "use client";
-import Link from 'next/link';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import NavigationButtons from '../components/NavigationButtons';
 import Image from 'next/image';
-
-interface Vehicle {
-  name: string;
-  image: string;
-}
-
 
 const vehicles = [
   { name: 'Truck', image: '/truck.jpg' },
@@ -24,8 +17,6 @@ const colors = [
   { bg: 'bg-yellow-200', border: 'border-yellow-500', circle: 'bg-yellow-500' },
   { bg: 'bg-green-200', border: 'border-green-500', circle: 'bg-green-500' },
 ];
-
-const employmentOptions = ['Employed', 'Self-Employed', 'Unemployed', 'Retired'];
 
 export default function MultiStepForm() {
   const [step, setStep] = useState<number>(1);
