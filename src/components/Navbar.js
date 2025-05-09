@@ -17,16 +17,13 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
-  // const [showNavbar, setShowNavbar] = useState(true);
-  // const lastScrollY = useRef(0);
-
-    useEffect(() => {
-      const handleScroll = () => {
-        if (menuOpen) setMenuOpen(false);
-      };
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, [menuOpen]);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (menuOpen) setMenuOpen(false);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [menuOpen]);
 
   return (
     <header className={`${styles.navbar} ${!showNavbar ? styles.hidden : ''}`}>

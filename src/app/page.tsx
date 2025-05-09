@@ -6,6 +6,11 @@ import Footer from '../components/Footer';
 import NavigationButtons from '../components/NavigationButtons';
 import Image from 'next/image';
 
+interface Vehicle {
+  name: string;
+  image: string;
+}
+
 
 const vehicles = [
   { name: 'Truck', image: '/truck.jpg' },
@@ -43,22 +48,22 @@ export default function MultiStepForm() {
   };
 
 
-  const handleVehicleSelect = (vehicle) => {
+  const handleVehicleSelect = (vehicle: string) => {
     setSelectedVehicle(vehicle);
     setStep(2);
   };
 
-  const handleEmploymentSelect = (status) => {
+  const handleEmploymentSelect = (status: string) => {
     setEmployment(status);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', { selectedVehicle, employment, ...formData });
     alert('Form submitted successfully!');
@@ -79,7 +84,7 @@ export default function MultiStepForm() {
                 className="border border-gray-300 p-6 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out"
                 onClick={() => handleVehicleSelect(vehicle.name)}
               >
-                <Image src={vehicle.Image} alt={vehicle.name} className="w-full h-30 object-cover rounded-md mb-4" />
+                <Image src={vehicle.image} alt={vehicle.name} className="w-full h-30 object-cover rounded-md mb-4" />
                 <h2 className="text-xl font-semibold text-center">{vehicle.name}</h2>
               </div>
             ))}
@@ -277,7 +282,7 @@ export default function MultiStepForm() {
           <p className="text-lg text-center max-w-2xl mx-auto mb-4">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, I not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
           <div className="flex flex-wrap justify-center">
             {vehicles.map((vehicle, index) => (
-              <Image key={index} src={vehicle.Image} alt={vehicle.name} className="h-40 w-auto max-w-xs" />
+              <Image key={index} src={vehicle.image} alt={vehicle.name} className="h-40 w-auto max-w-xs" />
             ))}
           </div>
         </div>
