@@ -68,14 +68,20 @@ export default function MultiStepForm() {
     {step === 1 && (
         <div>
           <h1 className="text-center text-4xl font-bold mt-16">Pick Your Vehicle</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 px-12 mt-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 sm:gap-4 sm:px-10 md:px-12 mt-12">
             {vehicles.map((vehicle, index) => (
               <div
                 key={index}
-                className="border border-gray-300 p-6 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out"
+                className="border border-gray-300 p-4 rounded-lg cursor-pointer hover:shadow-lg transition duration-300 ease-in-out"
                 onClick={() => handleVehicleSelect(vehicle.name)}
               >
-                <Image src={vehicle.image} alt={vehicle.name} className="w-full h-30 object-cover rounded-md mb-4" />
+                <Image 
+                    src={vehicle.image} 
+                    alt={vehicle.name} 
+                    width={200}
+                    height={200}
+                    className="object-cover rounded-md mb-4" 
+                />
                 <h2 className="text-xl font-semibold text-center">{vehicle.name}</h2>
               </div>
             ))}
@@ -213,11 +219,11 @@ export default function MultiStepForm() {
       onSubmit={handleSubmit}
       isLastStep={true}
     />
-  </form>
-)}
+    </form>
+    )}
 
         {/* About Section */}
-        <div className="mt-16 px-5 text-center">
+        <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold mb-4">ABOUT US</h2>
           <div className="w-16 border-t-4 border-green-500 mx-auto mb-6"></div>
           <p className="text-lg text-black-700 mb-6 max-w-3xl mx-auto">
@@ -268,12 +274,20 @@ export default function MultiStepForm() {
         <div className="text-black mt-8">
           <h2 className="text-4xl font-bold text-center mb-4">MORE VEHICLE <span className="text-green-500">OPTIONS</span></h2>
           <div className="w-16 border-t-4 border-green-500 mx-auto mb-6"></div>
-          <p className="text-lg text-center max-w-2xl mx-auto mb-4">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, We not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
-          <div className="flex flex-wrap justify-center">
-            {vehicles.map((vehicle, index) => (
-              <Image key={index} src={vehicle.image} alt={vehicle.name} className="h-40 w-auto max-w-xs" />
-            ))}
-          </div>
+          <p className="text-lg text-center max-w-2xl mb-4 sm:px-8">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, We not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
+          <div className="flex flex-wrap justify-center gap-2 p-4">
+  {vehicles.map((vehicle, index) => (
+    <div key={index} className="flex-shrink-0">
+      <Image 
+        src={vehicle.image} 
+        alt={vehicle.name} 
+        width={150} 
+        height={150} 
+        className="object-contain rounded-md mb-0" 
+      />
+    </div>
+  ))}
+</div>
         </div>
       
       <Footer />

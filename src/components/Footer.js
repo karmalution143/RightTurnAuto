@@ -7,7 +7,7 @@ export default function Footer() {
         {/* Logo and Copyright */}
         <div className="flex flex-col items-center mb-6">
           <div className="flex items-center gap-2 mb-8">
-            <Image src="/logo.png" alt="Right Turn Auto Credit" className="h-12" />
+            <Image src="/logo.png" alt="Right Turn Auto Credit" width={200} height={100} className="h-12" />
           </div>
           <p className="text-sm">Copyright 2025 Right Turn Auto Credit</p>
         </div>

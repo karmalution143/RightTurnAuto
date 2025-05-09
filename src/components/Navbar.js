@@ -8,6 +8,8 @@ import Image from 'next/image';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [showNavbar, setShowNavbar] = useState(true);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -28,7 +30,8 @@ const Navbar = () => {
   return (
     <header className={`${styles.navbar} ${!showNavbar ? styles.hidden : ''}`}>
       <div className={styles.logo}>
-        <Image src="/logo.png" alt="Right Turn Auto Credit" className={styles.logoImg} />
+        <Image src="/logo.png" alt="Right Turn Auto Credit" width={100} 
+  height={100} className={styles.logoImg} />
       </div>
 
       <button
