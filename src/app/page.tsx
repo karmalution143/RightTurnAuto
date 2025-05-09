@@ -94,7 +94,7 @@ export default function MultiStepForm() {
       {step === 1 && (
         <div>
           <h1 className="text-center text-4xl font-bold mt-16">Pick Your Vehicle</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-4 px-4 lg:grid-cols-2 sm:gap-4 sm:px-10 md:px-12 mt-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 px-12 mt-16 lg:ml-96 lg:mr-96">
             {vehicles.map((vehicle, index) => (
               <div
                 key={index}
@@ -252,7 +252,7 @@ export default function MultiStepForm() {
     <div className="mt-24 text-center">
       <h2 className="text-5xl font-bold mb-4">ABOUT US</h2>
       <div className="w-64 border-t-8 border-green-500 mx-auto mb-16"></div>
-      <p className="text-lg text-black-700 px-8 sm:px-8 md:px-12 lg:px-36 mx-auto">
+      <p className="text-lg text-black-700 px-8 sm:px-8 md:px-12 lg:px-96 mx-auto">
         We provide financing for our clientele all over Canada for brand new vehicles, used vehicles, and powersports.
         We treat all our clients on a case-by-case basis and understand that things in life happen and can offer programs 
         to help rebuild if you have had past credit issues due to various circumstances. Our goal is to have you as a customer 
@@ -301,7 +301,7 @@ export default function MultiStepForm() {
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-4">ALL CREDITS <span className="text-green-500">ACCEPTED</span></h2>
           <div className="w-64 border-t-8 border-green-500 mx-auto mb-16"></div>
-          <p className="text-lg mx-auto px-8 sm:px-8 md:px-12 lg:px-36">
+          <p className="text-lg mx-auto px-8 sm:px-8 md:px-12 lg:px-96">
             Common wisdom says that you need credit in order to build credit. But how do you take the first step 
             if your credit score is standing in your way? A lot of people are scared off by this &lsquo;credit paradox,&rsquo; 
             but there are ways around this vicious cycle. What&rsquo;s one of the best ways to develop a better credit score? 
@@ -315,10 +315,10 @@ export default function MultiStepForm() {
     <div className="text-black mt-8">
       <h2 className="text-5xl font-bold text-center mb-4">MORE VEHICLE <span className="text-green-500">OPTIONS</span></h2>
       <div className="w-64 border-t-8 border-green-500 mx-auto mb-16"></div>
-      <p className="text-lg text-center mb-4 px-8 sm:px-8 md:px-12 lg:px-36">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, We not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
+      <p className="text-lg text-center mb-4 px-8 sm:px-8 md:px-12 lg:px-96">We work to take the burden of your credit score off your back, and help you get started on the path to a better one. By setting you up with a car loan that works for your individual circumstances, We not only will assist you in getting a car that fits your wants and needs, but also in helping you develop your credit score and reputation.</p>
       <div className="flex flex-wrap justify-center gap-2 p-4">
         {vehicles.map((vehicle, index) => (
-          <div key={index} className="grid-cols-4">
+          <div key={index} className="flex-shrink-0 w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52">
             <Image 
               src={vehicle.image} 
               alt={vehicle.name} 
