@@ -34,7 +34,7 @@ const Navbar = () => {
   height={50} className={styles.logoImg} />
       </div>
 
-      <button
+      {/* <button
         className={styles.toggle}
         onClick={toggleMenu}
         aria-label={menuOpen ? 'Close menu' : 'Open menu'}
@@ -50,7 +50,7 @@ const Navbar = () => {
         <Link href="https://rta.ca/blog/" onClick={closeMenu}>Blog</Link>
         <Link href="https://rta.ca/testimonials/" onClick={closeMenu}>Testimonials</Link>
         <Link href="https://rta.ca/contact-us/" onClick={closeMenu}>Contact Us</Link>
-      </nav>
+      </nav> */}
     </header>
   );
 };
